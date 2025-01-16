@@ -32,11 +32,13 @@ function filterProjects(category) {
   }
 }
 
+// script.js
+
 // Open the lightbox
 function openLightbox(imgSrc) {
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");
-  lightbox.style.display = "block";
+  lightbox.style.display = "flex"; // Change to flex for centering
   lightboxImg.src = imgSrc;
 }
 
@@ -45,6 +47,18 @@ function closeLightbox() {
   var lightbox = document.getElementById("lightbox");
   lightbox.style.display = "none";
 }
+
+// Add event listeners to all project images
+document.querySelectorAll(".project-img").forEach((img) => {
+  img.addEventListener("click", function () {
+    openLightbox(this.src);
+  });
+});
+
+// Ensure the lightbox is closed initially
+window.onload = function () {
+  closeLightbox();
+};
 
 // Contact form validation
 console.log("form-validation.js loaded successfully!");

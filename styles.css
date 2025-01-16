@@ -77,12 +77,15 @@ nav ul li a:hover {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 .lightbox-content {
-  display: block;
-  margin: auto;
   max-width: 80%;
   max-height: 80%;
+  display: block;
+  margin: auto;
 }
 .close {
   position: absolute;
