@@ -1,0 +1,401 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #444;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+#hamburger {
+  display: none;
+}
+
+#about-me {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-me h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#about-me p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Ensure the filter menu is centered */
+#filter-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Style the filter buttons */
+#filter-menu button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the filter buttons */
+#filter-menu button:hover {
+  background-color: #555;
+}
+
+/* Active and focus state for the filter buttons */
+#filter-menu button:focus,
+#filter-menu button.active {
+  background-color: #777;
+  outline: none;
+}
+
+/* Active state for the filter buttons */
+#filter-menu button:active {
+  transform: translateY(2px);
+}
+
+/* Projects container */
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Projects grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+#filter-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#filter-menu button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#filter-menu button:hover {
+  background-color: #555;
+}
+
+#filter-menu button:focus,
+#filter-menu button.active {
+  background-color: #777;
+  outline: none;
+}
+
+#filter-menu button:active {
+  transform: translateY(2px);
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#projects h2 {
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+#skills {
+  text-align: center; /* Center the entire section */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#skills ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Center the list */
+}
+
+#skills ul li {
+  font-size: 18px;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 30px;
+  display: inline-block; /* Make list items inline-block to center them */
+  text-align: left; /* Align text to the left */
+}
+
+#skills ul li::before {
+  content: "\2713"; /* Unicode character for check mark */
+  position: absolute;
+  left: 0;
+  color: green;
+  font-size: 20px;
+  line-height: 18px; /* Adjust line-height to match the text */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#contact {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact label {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#contact button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+  }
+
+  #nav-links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #nav-links li {
+    display: block;
+    margin: 0;
+  }
+
+  #nav-links li a {
+    padding: 10px;
+    border-top: 1px solid #555;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 14px 20px;
+    color: white;
+    background-color: #444;
+    text-align: center;
+  }
+
+  #hamburger:hover {
+    background-color: #555;
+  }
+
+  #hamburger.active + ul {
+    display: flex;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: calc(100% - 40px);
+  }
+}
+
+/* Responsive Images and Videos */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

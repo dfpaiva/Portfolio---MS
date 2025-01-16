@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav-menu" role="navigation">
+        <ul id="nav-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="hamburger" onclick="toggleMenu()">&#9776;</div>
+      </nav>
+    </header>
+
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm a passionate web developer with a love for creating dynamic
+        and responsive websites. I have experience in HTML, CSS, JavaScript, and
+        various frameworks. I enjoy problem-solving and continuously learning
+        new technologies.
+      </p>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="filter-menu">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('productivity')">Productivity</button>
+        <button onclick="filterProjects('ecommerce')">E-commerce</button>
+      </div>
+      <article class="project-card" data-category="productivity">
+        <h3>Task Manager</h3>
+        <figure>
+          <img
+            src="project1.jpg"
+            alt="Screenshot of Project 1"
+            class="project-img"
+          />
+        </figure>
+        <p>
+          This project is a web application that allows users to track their
+          tasks and manage their time efficiently.
+        </p>
+      </article>
+      <article class="project-card" data-category="ecommerce">
+        <h3>Amazon</h3>
+        <figure>
+          <img
+            src="project2.jpg"
+            alt="Screenshot of Project 2"
+            class="project-img"
+          />
+        </figure>
+        <p>
+          This project is an e-commerce website that provides a seamless
+          shopping experience with a variety of products.
+        </p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Git</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="submit_form.php" method="post" id="contact-form" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
